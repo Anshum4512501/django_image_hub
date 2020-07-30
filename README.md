@@ -8,5 +8,5 @@ Features
   counts ratings
   
 CONS
-  this is mobile responsive
+  this is not mobile responsive
   
