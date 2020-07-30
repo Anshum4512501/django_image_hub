@@ -1,0 +1,13 @@
+Watching for file changes with StatReloader
+/home/anshu/django_projects/django_image_hub/image_hub/image_hub_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 205
+/home/anshu/django_projects/django_image_hub/image_hub/image_hub_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 205
+/home/anshu/django_projects/django_image_hub/image_hub/image_hub_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/anshu/django_projects/django_image_hub/image_hub/image_hub_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 205
+"GET / HTTP/1.1" 200 210

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+
+{% block navbar %}
+    {% include "admin/nav-bar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <div class="row ">
+            <div class="col-md-3">
+                    
+            </div>
+            <div class="col-md-7 shadow p-4">
+                {% if form.is_multipart %}
+                        <form enctype="multipart/form-data" method="post" action="">
+                            {% csrf_token %}
+                     {% for field in form %}
+                        
+                        
+                        <div class="mb-3 row ">
+                            <label for="staticEmail" class="col-sm-4 col-form-label  font-weight-light">{{field.label}}</label>
+                            
+                            <div class="col-sm-6">
+                                {{field}}
+
+                            </div>
+                          </div>
+                          
+                          
+                    {% endfor %} 
+                   
+                    
+                    <div class="submit-button w-100  mb-3">
+                        <input type="submit" class="btn btn-info rounded-0 p-2 mt-2" value="submit">    
+                    </div>
+                    
+                {% else %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                     {% for field in form %}
+                        
+                        
+                        <div class="mb-3 row ">
+                            <label for="staticEmail" class="col-sm-4 col-form-label  font-weight-light">{{field.label}}</label>
+                            
+                            <div class="col-sm-6">
+                                {{field}}
+
+                            </div>
+                          </div>
+                          
+                          
+                    {% endfor %} 
+                   
+                    
+                    <div class="submit-button w-100  mb-3">
+                        <input type="submit" class="btn btn-info rounded-0 p-2 mt-2" value="submit">    
+                    </div>
+                    
+                </form>
+                {% endif %}
+            </div>
+            
+        </div>
+        <hr class="m-5">
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include "admin/nav-bar.html" %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-10 col-lg-7 col-md-mt-4">
+                    <div class="column-content">
+                        {{message}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">    
+{% endblock %}
+
+{% block navbar %}
+    {% include "image_hub_app/nav_bar.html" %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="main-content">
+            <div class="row mt-4 ">
+                <div class="col-md-10  mx-auto col-md-mt-4">
+                    <div class="column-content">
+                        <div class="row">
+                            <div class="col-md-4 ">
+                                <div class="left-column-content ">
+                                    <img src="{{ obj.image.url }}" class="img-thumbnail  " style="width: 400px;" alt="" srcset="" download>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="image-details-right-side-container border-sm">
+                                    <h1 class="text-muted">{{obj.title}}</h1>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="image-details-right-side-container-left-side">
+                                                <h3 class="text-dark">{{obj.description}}</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 d-flex">
+                                            <div class="image-details-right-side-container-left-side ml-auto text-muted">
+                                                <span><small>Ratings</small></span>
+                                                <i class="far fa-star m-1"></i>
+                                                <i class="far fa-star m-1"></i>
+                                                <i class="far fa-star m-1"></i>
+                                                <i class="far fa-star m-1"></i>
+                                                <i class="far fa-star m-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-md-6">
+                                            <div class="cateogory-details shadow-sm" >
+                                                <p>{{obj.category.title}}</p>
+                                                <small>{{obj.category.category_name}}</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="cateogory-details shadow-sm" >
+                                                <div class="category-description text-right">
+                                                    <small class="">{{obj.category.description}}</small>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="{% url 'image_hub_app:image-redirect' pk=obj.id %}" class="btn btn-info">Download</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
